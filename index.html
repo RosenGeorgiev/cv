@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="personal site">
+  <meta name="author" content="Rossen Georgiev">
+
+  <title>rosen-georgiev.com</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/resume.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+    <a class="navbar-brand js-scroll-trigger" href="#page-top">
+      <span class="d-block d-lg-none">Rossen Georgiev</span>
+      <span class="d-none d-lg-block">
+        <img class="img-fluid img-profile rounded mx-auto mb-2"
+             src="img/profile.png" alt="">
+      </span>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#experience">Experience</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#education">Education</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container-fluid p-0">
+
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="about">
+      <div class="w-100">
+        <h1 class="mb-0">Rossen
+          <span class="text-primary">Georgiev</span>
+        </h1>
+        <div class="subheading mb-5">Varna, Bulgaria ·
+          <a href="mailto:rosengeorgiev93@gmail.com">rosengeorgiev93@gmail.com</a>
+        </div>
+        <p class="lead mb-5">Generalist developer - mainly C++ and Python.</p>
+        <div class="social-icons">
+          <a href="https://www.linkedin.com/in/rosen-georgiev-44b3a1114"/>
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://github.com/RosenGeorgiev">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <hr class="m-0">
+
+    <section class="resume-section p-3 p-lg-5 d-flex justify-content-center" id="experience">
+      <div class="w-100">
+        <h2 class="mb-5">Experience</h2>
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between">
+          <div class="resume-content">
+            <h3 class="mb-0">Full-stack Developer</h3>
+            <div class="subheading mb-3">Self-employed</div>
+            <p>Developing PerunVMS.</p>
+            <p>PerunVMS is a feature rich scalable video surveillance system.
+            <ul>
+                <li>Runs everywhere - Windows, Linux, x86, ARM</li>
+                <li>Scalable - Allows to easily deploy more worker nodes to scale out your system when needed</li>
+                <li>Easy to install - Just run the installer or use the provided package for your distro</li>
+                <li>Easy to access - The web UI gives you access to your cameras from every place on earth</li>
+                <li>Fast - Written in standard C++ giving it the opportunity to use all the horsepower your system has</li>
+                <li>Universal - Works with a wide array of IP cameras (USB camears are not supported yet)</li>
+            </ul>
+            </p>
+            <p>PerunVMS was created after I needed a video surveillance solution that was able to run on a RPi, tried multiple open source projects and none of them were adequate enough for my needs. They were either legacy and poorly supported projects, that were not adequate for the present days or written with a bloated JS based tech stack and ran way too slow. The most popular commercial solutions simply lacked any Linux support. Thus the idea to create PerunVMS was born.</p>
+            <p>The idea was for this to be mainly an educational project. It has more than completed it's goal it that regard.</p>
+            <p>During the development of PerunVMS I improved my existing C++ and Python skills and also learned the intricacies of creating and managing large software projects from scratch. I had the opportunity to learn about SOA and using gRPC for communicating between separate services.</p>
+            <p>In the development process I discovered how to properly use FFmpeg and OpenCV to read video feeds from IP cameras, perform the needed analytics, save the events of interest and re-stream the feed to client applications and then consume it by using HTML5 Media Source Extensions.</p>
+            <p>I decided to have a web-based client application as a beginning(the architecture supports having multiple client implementations). For it I used Python with Flask as a web app back-end with HTML/JavaScript/Bootstrap/SocketIO/JQuery on the front-end. Even though this works, I hope to one day replace with with a C++ reimplementation, because Python's lack of true multithreading did prove to be a bottleneck.</p>
+            <p>CMake - the build system I used - was another new thing for me. To retain software quality and prevent bugs from creeping in over time, I decided to implement a thorough test suite. The Catch2 library was used to achieve this goal. As a bonus it integrates nicely with CMake and CTest. Another learning experience for me was the process of creating RPM and DEB packages for different Linux distributions.
+            </p>
+          </div>
+          <div class="resume-date text-md-right">
+            <span class="text-primary">February 2020 - Now</span>
+          </div>
+        </div>
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between">
+          <div class="resume-content">
+            <h3 class="mb-0">Junior C++ Developer</h3>
+            <div class="subheading mb-3">Nand Ltd.</div>
+            <p>Responsible for both internal and consumer facing tooling. Worked on several own projects. Contributed to the company's main product(industry leading label inspection software). Learned various technologies in the work process.</p>
+          </div>
+          <div class="resume-date text-md-right">
+            <span class="text-primary">August 2017 - February 2020</span>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <hr class="m-0">
+
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="education">
+      <div class="w-100">
+        <h2 class="mb-5">Education</h2>
+
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+          <div class="resume-content">
+            <h3 class="mb-0">University of economics - Varna</h3>
+            <div class="subheading mb-3">Business information systems</div>
+          </div>
+          <div class="resume-date text-md-right">
+            <span class="text-primary">2016 - 2017</span>
+          </div>
+        </div>
+
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between">
+          <div class="resume-content">
+            <h3 class="mb-0">University of economics - Varna</h3>
+            <div class="subheading mb-3">Management</div>
+          </div>
+          <div class="resume-date text-md-right">
+            <span class="text-primary">2012 - 2016</span>
+          </div>
+        </div>
+
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between">
+          <div class="resume-content">
+            <h3 class="mb-0">High School 'Prof. Dr. Asen Zlatarov' - Vidin</h3>
+          </div>
+          <div class="resume-date text-md-right">
+            <span class="text-primary">2007 - 2012</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <hr class="m-0">
+
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="skills">
+      <div class="w-100">
+        <h2 class="mb-5">Skills</h2>
+
+        <div class="subheading mb-3">Programming Languages &amp; Libraries &amp; Tools</div>
+        <ul class="fa-ul mb-0">
+          <li>
+            <i class="fa-li fa fa-check"></i>
+            C++11/14/17/20
+          </li>
+          <li>
+            <i class="fa-li fa fa-check"></i>
+            CMake
+          </li>
+          <li>
+            <i class="fa-li fa fa-check"></i>
+            SDL2
+          </li>
+          <li>
+            <i class="fa-li fa fa-check"></i>
+            Catch2
+          </li>
+          <li>
+            <i class="fa-li fa fa-check"></i>
+            Botan2
+          </li>
+          <li>
+            <i class="fa-li fa fa-check"></i>
+            sqlpp11
+          </li>
+          <li>
+            <i class="fa-li fa fa-check"></i>
+            FFmpeg
+          </li>
+          <li>
+            <i class="fa-li fa fa-check"></i>
+            Python3
+          </li>
+          <li>
+            <i class="fa-li fa fa-check"></i>
+            Flask
+          </li>
+          <li>
+            <i class="fa-li fa fa-check"></i>
+            Selenium
+          </li>
+          <li>
+            <i class="fa-li fa fa-check"></i>
+            SQLAlchemy/Alembic
+          </li>
+          <li>
+            <i class="fa-li fa fa-check"></i>
+            HTML/CSS/JavaScript
+          </li>
+          <li>
+            <i class="fa-li fa fa-check"></i>
+            Bootstrap
+          </li>
+          <li>
+            <i class="fa-li fa fa-check"></i>
+            JQuery
+          </li>
+          <li>
+            <i class="fa-li fa fa-check"></i>
+            Linux
+          </li>
+          <li>
+            <i class="fa-li fa fa-check"></i>
+            Git
+          </li>
+          <li>
+            <i class="fa-li fa fa-check"></i>
+            Docker
+          </li>
+          <li>
+            <i class="fa-li fa fa-check"></i>
+            Doxygen
+          </li>
+          <li>
+            <i class="fa-li fa fa-check"></i>
+            Shell scripting
+          </li>
+          <li>
+            <i class="fa-li fa fa-check"></i>
+            VIM
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <hr class="m-0">
+
+  </div>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/resume.min.js"></script>
+
+</body>
+
+</html>
