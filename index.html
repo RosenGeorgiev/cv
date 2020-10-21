@@ -86,23 +86,7 @@
             <h3 class="mb-0">Full-stack Developer</h3>
             <div class="subheading mb-3">Self-employed</div>
             <p>Developing PerunVMS.</p>
-            <p>PerunVMS is a feature rich scalable video surveillance system.
-            <ul>
-                <li>Runs everywhere - Windows, Linux, x86, ARM</li>
-                <li>Scalable - Allows to easily deploy more worker nodes to scale out your system when needed</li>
-                <li>Easy to install - Just run the installer or use the provided package for your distro</li>
-                <li>Easy to access - The web UI gives you access to your cameras from every place on earth</li>
-                <li>Fast - Written in standard C++ giving it the opportunity to use all the horsepower your system has</li>
-                <li>Universal - Works with a wide array of IP cameras (USB camears are not supported yet)</li>
-            </ul>
-            </p>
-            <p>PerunVMS was created after I needed a video surveillance solution that was able to run on a RPi, tried multiple open source projects and none of them were adequate enough for my needs. They were either legacy and poorly supported projects, that were not adequate for the present days or written with a bloated JS based tech stack and ran way too slow. The most popular commercial solutions simply lacked any Linux support. Thus the idea to create PerunVMS was born.</p>
-            <p>The idea was for this to be mainly an educational project. It has more than completed it's goal it that regard.</p>
-            <p>During the development of PerunVMS I improved my existing C++ and Python skills and also learned the intricacies of creating and managing large software projects from scratch. I had the opportunity to learn about SOA and using gRPC for communicating between separate services.</p>
-            <p>In the development process I discovered how to properly use FFmpeg and OpenCV to read video feeds from IP cameras, perform the needed analytics, save the events of interest and re-stream the feed to client applications and then consume it by using HTML5 Media Source Extensions.</p>
-            <p>I decided to have a web-based client application as a beginning(the architecture supports having multiple client implementations). For it I used Python with Flask as a web app back-end with HTML/JavaScript/Bootstrap/SocketIO/JQuery on the front-end. Even though this works, I hope to one day replace with with a C++ reimplementation, because Python's lack of true multithreading did prove to be a bottleneck.</p>
-            <p>CMake - the build system I used - was another new thing for me. To retain software quality and prevent bugs from creeping in over time, I decided to implement a thorough test suite. The Catch2 library was used to achieve this goal. As a bonus it integrates nicely with CMake and CTest. Another learning experience for me was the process of creating RPM and DEB packages for different Linux distributions.
-            </p>
+            <p>PerunVMS is a feature rich scalable video surveillance system that I'm building as a side project. It combines a C++ back-end and a web-based front-end to give it's users both high performance and a modern and easy to use UI. It gave me insight into every stage of a software project - from it's design all the way to it's distribution.</p>
           </div>
           <div class="resume-date text-md-right">
             <span class="text-primary">February 2020 - Now</span>
